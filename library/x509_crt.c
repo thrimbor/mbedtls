@@ -2685,7 +2685,7 @@ find_parent:
     }
 }
 
-#ifdef _WIN32
+#if defined(_WIN32) && !defined(NXDK)
 #ifdef _MSC_VER
 #pragma comment(lib, "ws2_32.lib")
 #include <winsock2.h>

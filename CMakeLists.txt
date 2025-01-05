@@ -83,6 +83,11 @@ else()
     set(COMPILER_ID ${CMAKE_C_COMPILER_ID})
 endif(CMAKE_C_SIMULATE_ID)
 
+if (NXDK)
+    # Workaround for https://github.com/Mbed-TLS/mbedtls/issues/9896
+    set(COMPILER_ID "Clang")
+endif(NXDK)
+
 string(REGEX MATCH "Clang" CMAKE_COMPILER_IS_CLANG "${COMPILER_ID}")
 string(REGEX MATCH "GNU" CMAKE_COMPILER_IS_GNU "${COMPILER_ID}")
 string(REGEX MATCH "IAR" CMAKE_COMPILER_IS_IAR "${COMPILER_ID}")
@@ -307,7 +312,7 @@ add_subdirectory(framework)
 
 add_subdirectory(include)
 
-add_subdirectory(3rdparty)
+# add_subdirectory(3rdparty)
 
 add_subdirectory(library)
 

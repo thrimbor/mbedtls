@@ -149,7 +149,7 @@
  * mbedtls_platform_gmtime_r() at compile-time by using the macro
  * MBEDTLS_PLATFORM_GMTIME_R_ALT.
  */
-#define MBEDTLS_HAVE_TIME_DATE
+//#define MBEDTLS_HAVE_TIME_DATE
 
 /**
  * \def MBEDTLS_PLATFORM_MEMORY
@@ -540,7 +540,7 @@
  *
  * Uncomment to use your own hardware entropy collector.
  */
-//#define MBEDTLS_ENTROPY_HARDWARE_ALT
+#define MBEDTLS_ENTROPY_HARDWARE_ALT
 
 /**
  * \def MBEDTLS_AES_ROM_TABLES
@@ -1183,7 +1183,7 @@
  *
  * Enable functions that use the filesystem.
  */
-#define MBEDTLS_FS_IO
+//#define MBEDTLS_FS_IO
 
 /**
  * \def MBEDTLS_NO_DEFAULT_ENTROPY_SOURCES
@@ -1206,7 +1206,7 @@
  *
  * Uncomment this macro to disable the built-in platform entropy functions.
  */
-//#define MBEDTLS_NO_PLATFORM_ENTROPY
+#define MBEDTLS_NO_PLATFORM_ENTROPY
 
 /**
  * \def MBEDTLS_ENTROPY_FORCE_SHA256
@@ -2267,7 +2267,7 @@
  *
  * This modules adds support for the AES-NI instructions on x86.
  */
-#define MBEDTLS_AESNI_C
+//#define MBEDTLS_AESNI_C
 
 /**
  * \def MBEDTLS_AESCE_C
@@ -3003,7 +3003,7 @@
  *
  * This module provides networking routines.
  */
-#define MBEDTLS_NET_C
+//#define MBEDTLS_NET_C
 
 /**
  * \def MBEDTLS_OID_C
@@ -3040,7 +3040,7 @@
  *
  * This modules adds support for the VIA PadLock on x86.
  */
-#define MBEDTLS_PADLOCK_C
+//#define MBEDTLS_PADLOCK_C
 
 /**
  * \def MBEDTLS_PEM_PARSE_C
@@ -3254,7 +3254,7 @@
  *           either MBEDTLS_PSA_ITS_FILE_C or a native implementation of
  *           the PSA ITS interface
  */
-#define MBEDTLS_PSA_CRYPTO_STORAGE_C
+//#define MBEDTLS_PSA_CRYPTO_STORAGE_C
 
 /**
  * \def MBEDTLS_PSA_ITS_FILE_C
@@ -3266,7 +3266,7 @@
  *
  * Requires: MBEDTLS_FS_IO
  */
-#define MBEDTLS_PSA_ITS_FILE_C
+//#define MBEDTLS_PSA_ITS_FILE_C
 
 /**
  * \def MBEDTLS_RIPEMD160_C
@@ -4019,7 +4019,7 @@
  * If the implementation here is empty, this will effectively disable the
  * checking of functions' return values.
  */
-//#define MBEDTLS_CHECK_RETURN __attribute__((__warn_unused_result__))
+#define MBEDTLS_CHECK_RETURN __attribute__((__warn_unused_result__))
 
 /** \def MBEDTLS_IGNORE_RETURN
  *
